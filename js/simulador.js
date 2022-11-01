@@ -5,7 +5,7 @@ var enviado = false;
 var dadosprev = [];
 var dadospoup = [];
 var dados0 = [];
-const rta2 = 1.47;
+const rta2 = 6;
 const jam2 = ((1 + rta2 / 100) ** (1 / 12) - 1);
 var data = {
     labels: ["5 anos", "", "", "", "", "10 anos", "", "", "", "", "15 anos", "", "", "", "", "20 anos", "", "", "", "", "25 anos", "", "", "", "", "30 anos", "", "", "", "", "35 anos"],
@@ -106,8 +106,7 @@ function atualiza(tipo) {
             at();
             break;
         case 5:
-            //dadosprev = [];
-            //dadospoup = [];
+            
             at();
            
             break;
@@ -192,7 +191,7 @@ function faz(pag) {
     data.append('tel', tel);
     data.append('email', email);
     data.append('pag', pagina);
-    fetch('https://www.lejuseguros.com.br/envi', {
+    fetch('../enviar.php', {
         method: 'POST',
         mode: 'no-cors',
         body: data
