@@ -41,22 +41,6 @@
   }
   </style>
 
-<script>
-  var params = window.location.search.substring(1);
-  var sld = params.split('=');
-  
-  window.onload=function(){
-    if (sld[1] == '2'){
-     
-      var carouselini = document.getElementById("simulador");
-      var carouselini1 = bootstrap.Carousel.getOrCreateInstance(carouselini);
-      carouselini1.next();
-      cria();
-  }
-};
-  
-</script>
-
 
 </head>
 
@@ -137,9 +121,9 @@
                 </div>
                 <div class="col-sm-6 col-xs-12">
                     <label for="rta" class="form-label">Rentabilidade esperada ao ano - simulação</label>
-                    <input type="text" class="form-control" id="rta" value="6%" disabled>
+                    <input type="text" class="form-control" id="rta" value="10%" disabled>
                    
-                    <input type="range" class="form-range" min="4" max="10" step="1" data-bs-toggle="tooltip" data-bs-placement="top" title="Deslize para alterar a rentabilidade esperada." id="srt1" oninput="atualiza(8)" onchange="atualiza(8)"></td>
+                    <input type="range" class="form-range" min="8" max="16" step="1" data-bs-toggle="tooltip" data-bs-placement="top" title="Deslize para alterar a rentabilidade esperada." id="srt1" oninput="atualiza(8)" onchange="atualiza(8)"></td>
                 
                 </div>
                 </form>
@@ -198,7 +182,7 @@
                         
                         <td id="re"></td>
                         <td class="w-25">
-                          <input type="range" class="form-range" min="4" max="10" step="1" data-bs-toggle="tooltip" data-bs-placement="top" title="Deslize para alterar a rentabilidade esperada." id="srt" oninput="atualiza(3)" onchange="atualiza(3)"></td>
+                          <input type="range" class="form-range" min="8" max="16" step="1" data-bs-toggle="tooltip" data-bs-placement="top" title="Deslize para alterar a rentabilidade esperada." id="srt" oninput="atualiza(3)" onchange="atualiza(3)"></td>
                       
                         
                       </tr>
