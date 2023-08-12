@@ -191,18 +191,7 @@ function faz(pag) {
     data.append('tel', tel);
     data.append('email', email);
     data.append('pag', pagina);
-    fetch('../enviar.php', {
-        method: 'POST',
-        mode: 'no-cors',
-        body: data
-    })
-        .then(response => {
-            return response.text()
-        })
-        .then(d => {
-            console.log("sucesso");
-            return d;
-        })
+    
 }
 
 
